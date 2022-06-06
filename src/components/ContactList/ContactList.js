@@ -2,20 +2,18 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import s from './ContactList.module.css';
 import PropTypes, { arrayOf } from 'prop-types';
-// import actions from '../redux/contactsAction';
 import { getContact, getFilter } from '../redux/contactsSelector';
 import { fetchItems, deleteItems } from '../redux/contactsOperation';
 
 
 const ContactList = () => {
-  // const completeContactList = useSelector(getContact);
+  const completeContactList = useSelector(getContact);
   const filter = useSelector(getFilter);
   const dispatch = useDispatch();
-  const contacts = useSelector(getContact);
-  // const contacts = completeContactList.filter(contact => contact.name.toLowerCase().includes(filter.toLowerCase()));
+  const contacts = completeContactList.filter(contact => contact.name.toLowerCase().includes(filter.toLowerCase()));
   useEffect(() => dispatch(fetchItems())
     , [dispatch])
-  // dispatch(fetchItems());
+
 
 
   return (

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import s from './ContactList.module.css';
 import PropTypes, { arrayOf } from 'prop-types';
-import { getContact, getFilter, getFilteredContacts } from '../redux/contactsSelector';
+import { getContact, getFilteredContacts } from '../redux/contactsSelector';
 import { fetchItems, deleteItems } from '../redux/contactsOperation';
 
 const ContactList = () => {

@@ -1,8 +1,8 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 // import { useDispatch } from 'react-redux';
-import { deleteContactRequest, deleteContactSuccess, deleteContactError } from '../redux/contactsAction';
+// import { deleteContactRequest, deleteContactSuccess, deleteContactError } from '../redux/contactsAction';
 import * as contactsAPI from '../../services/contacts-api';
-import axios from 'axios';
+
 
 // const dispatch = useDispatch();
 
@@ -56,37 +56,3 @@ export const deleteItems = createAsyncThunk(
 
 // }
 
-// const deleteTodo = todoId => dispatch => {
-//     dispatch(deleteTodoRequest());
-
-//     axios
-//         .delete(`/tasks/${todoId}`)
-//         .then(() => dispatch(deleteTodoSuccess(todoId)))
-//         .catch(error => dispatch(deleteTodoError(error.message)));
-// };
-
-// import { createAsyncThunk } from '@reduxjs/toolkit';
-// import * as bookShelfAPI from 'services/bookshelf-api';
-
-// export const fetchBooks = createAsyncThunk(
-//     'books/fetchBooks',
-//     async (_, { rejectWithValue }) => {
-//         try {
-//             const books = await bookShelfAPI.fetchBooks();
-//             return books;
-//         } catch (error) {
-//             return rejectWithValue(error);
-//         }
-//     },
-// );
-
-// async (id, { rejectedWithValue }) => {
-//     try {
-//         const item = await contactsAPI.deleteContact(id);
-//         console.log(item);
-//         return item;
-//     } catch (error) {
-//         return rejectedWithValue(error)
-//     }
-
-// }

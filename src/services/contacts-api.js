@@ -15,7 +15,19 @@ export async function postContacts(contact) {
 
 export async function deleteContact(id) {
     const { data } = await axios.delete(`/contacts/${id}`);
-    return data;
-
-
+    return data
 }
+
+// export function deleteContact(id) {
+//     axios.delete(`/contacts/${id}`, id)
+//     // .then(({ data }) => data)
+
+
+
+
+// }
+// axios
+//     .delete(`/tasks/${todoId}`)
+//     .then(() => dispatch(deleteTodoSuccess(todoId)))
+//     .catch(error => dispatch(deleteTodoError(error.message)));
+// };

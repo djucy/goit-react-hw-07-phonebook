@@ -1,7 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 // import { useDispatch } from 'react-redux';
 // import { deleteContactRequest, deleteContactSuccess, deleteContactError } from '../redux/contactsAction';
-import * as contactsAPI from '../../services/contacts-api';
+import * as contactsAPI from '../services/contacts-api';
 
 
 // const dispatch = useDispatch();

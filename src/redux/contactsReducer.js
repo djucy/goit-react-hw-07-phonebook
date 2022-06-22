@@ -1,13 +1,13 @@
 import { combineReducers } from 'redux';
 import { createReducer } from '@reduxjs/toolkit';
-import actions from '../redux/contactsAction';
-import { fetchItems, postItems, deleteItems } from '../redux/contactsOperation';
+import actions from './contactsAction';
+import { fetchItems, postItems, deleteItems } from './contactsOperation';
 
 const items = createReducer([], {
 
     [fetchItems.fulfilled]: (_, action) => action.payload,
-    [postItems.fulfilled]: (state, { payload }) => [...state, payload],
-    [deleteItems.fulfield]: (state, { payload }) => state.filter(({ id }) => id !== payload),
+    [postItems.fulfilled]: (state, { payload }) => [ payload,...state],
+    [deleteItems.fulfilled]: (state, { payload }) => state.filter(({ id }) => id !== payload),
 
 
 

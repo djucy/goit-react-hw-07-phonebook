@@ -3,9 +3,8 @@ import style from '../CommonStyle/CommoneStyle.module.css';
 import s from '../Phonebook/Phonebook.module.css';
 import { useDispatch, useSelector } from "react-redux";
 import { nanoid } from 'nanoid';
-// import actions from '../redux/contactsAction';
-import { getContact } from 'components/redux/contactsSelector';
-import { postItems } from '../redux/contactsOperation';
+import { getContact } from '../../redux/contactsSelector';
+import { postItems } from '../../redux/contactsOperation';
 
 
 export default function Phonebook() {

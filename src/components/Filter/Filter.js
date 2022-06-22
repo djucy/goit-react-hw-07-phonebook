@@ -4,8 +4,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import style from '../CommonStyle/CommoneStyle.module.css';
 import s from '../Filter/Filter.module.css';
 
-import { getFilter } from '../redux/contactsSelector';
-import actions from '../redux/contactsAction';
+import { getFilter } from '../../redux/contactsSelector';
+import actions from '../../redux/contactsAction';
 
 const Filter = () => {
   const value = useSelector(getFilter);

@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import s from './ContactList.module.css';
 import PropTypes, { arrayOf } from 'prop-types';
-import { getContact, getFilteredContacts } from '../redux/contactsSelector';
-import { fetchItems, deleteItems } from '../redux/contactsOperation';
+import { getContact, getFilteredContacts } from '../../redux/contactsSelector';
+import { fetchItems, deleteItems } from '../../redux/contactsOperation';
 
 const ContactList = () => {
   const dispatch = useDispatch();
@@ -54,9 +54,4 @@ ContactList.propTypes = {
       id: PropTypes.string.isRequired,
     }),
   )
-
 }
-
-
-
-  // () => dispatch(deleteItems(id))
